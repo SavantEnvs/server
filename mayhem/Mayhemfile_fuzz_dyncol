@@ -1,0 +1,9 @@
+project: savantenvs/server
+target: fuzz_dyncol
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_dyncol/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_dyncol
+    libfuzzer: true
+    timeout: 10
